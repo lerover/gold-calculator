@@ -3,15 +3,24 @@ let salePriceInputTag = document.getElementById("salePriceInput");
 let currentPriceInputTag = document.getElementById("currentPriceInput");
 let calBtnTag = document.getElementById("calBtn");
 
+// console.log(gramInputTag,salePriceInputTag,currentPriceInputTag,calBtnTag);
+
 //result Tag
 let itemBoldOneTag = document.getElementById("itemBoldOne");
 let itemBoldTwoTag = document.getElementById("itemBoldTwo");
 let itemBoldThreeTag = document.getElementById("itemBoldThree");
 
-calBtnTag.addEventListener("click", function () {
+// console.log(itemBoldOneTag,itemBoldTwoTag,itemBoldThreeTag);
+
+calBtnTag.addEventListener("click", function (e) {
+    e.preventDefault();
     let gramInputTagValue = gramInputTag.value;
     let salePriceInputValue = salePriceInputTag.value;
     let currentPriceInputValue = currentPriceInputTag.value;
+
+    // console.log(gramInputTagValue,salePriceInputValue,currentPriceInputValue);
+
+    
 
     let gramToPaeValue = eval(gramInputTagValue / 1.0205);
 
@@ -30,5 +39,5 @@ calBtnTag.addEventListener("click", function () {
 
 })
 
-console.log(itemBoldOneTag.textContent);
-console.log("Hello World");
+
+
